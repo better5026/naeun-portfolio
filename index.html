@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="윤나은 — AI · Computer Vision · Machine Learning Engineer">
+  <title>윤나은 | AI Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">NY</a>
+      <ul class="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#publications" data-section="publications">Publications</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="text-caption hero-label fade-in">Portfolio · Hanbat National University</p>
+      <h1 class="text-display hero-title fade-in">AI · Computer Vision<br>Engineer</h1>
+      <p class="text-headline hero-name fade-in">윤나은</p>
+      <p class="text-body hero-sub fade-in">Big Data · Machine Learning · Deep Learning · Computer Vision</p>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="text-caption section-label">About</span>
+        <h2 class="text-h2 section-title">Research &amp; Implementation</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="text-lead about-lead">
+            데이터 수집부터 모델 학습까지
+          </p>
+          <p class="text-body">
+            🎓한밭대학교 컴퓨터공학과(2025.02) 졸업<br>🔬EcoAI Lab(2023.12–2024.11)에서 시계열 예측, 멀티센서 데이터 분석, Computer Vision 연구<br>📄IEEE/IEIE ICCE-Asia 등 학술대회 5편 발표<br>🏆DSC-KT 오픈데이터 챌린지 객체 탐지 프로젝트<br>🤖ROS 기반 자율주행 로봇
+          </p>
+          <div class="about-facts">
+            <div class="fact card card--compact">
+              <span class="text-caption">Education</span>
+              <span class="text-body-sm">B.S. Computer Science · Hanbat National University</span>
+            </div>
+            <div class="fact card card--compact">
+              <span class="text-caption">Lab</span>
+              <span class="text-body-sm">EcoAI Lab · Undergraduate Researcher</span>
+            </div>
+          </div>
+        </div>
+        <ol class="timeline reveal">
+          <li class="timeline-item">
+            <span class="timeline-marker">2021</span>
+            <div class="card timeline-card">
+              <span class="text-caption timeline-label">AAI Lab</span>
+              <p class="text-body-sm">운영체제 조교 · 한밭대학교</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-marker">2023</span>
+            <div class="card timeline-card">
+              <span class="text-caption timeline-label">EcoAI Lab</span>
+              <p class="text-body-sm">멀티센서·시계열 ML 연구 시작</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-marker">2024</span>
+            <div class="card timeline-card">
+              <span class="text-caption timeline-label">Publications</span>
+              <p class="text-body-sm">학술대회 5편 발표 (2편 1저자)</p>
+            </div>
+          </li>
+          <li class="timeline-item timeline-item--active">
+            <span class="timeline-marker">2024</span>
+            <div class="card timeline-card">
+              <span class="text-caption timeline-label">OpenData + Capstone</span>
+              <p class="text-body-sm">CCTV 객체 탐지 · ROS 자율주행 로봇</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section projects" id="projects">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="text-caption section-label">Projects</span>
+        <h2 class="text-h2 section-title">Selected Work</h2>
+      </header>
+
+      <!-- Project 01: DSC-KT / CV -->
+      <article class="project reveal" id="project-cv">
+        <div class="project-top">
+          <div class="project-meta">
+            <span class="text-caption project-index">01 · Nov 2024</span>
+            <span class="pill">Computer Vision</span>
+            <span class="pill pill--muted">DSC-KT OpenData Challenge</span>
+          </div>
+          <h3 class="text-h3 project-title">실시간 이상 운전 차량 탐지 시스템</h3>
+          <p class="text-body project-desc">국도 CCTV 영상에서 이상 운전 차량을 실시간 탐지</p>
+          <p class="text-body-sm project-role"><strong>Role</strong> 전처리, 모델 개발</p>
+        </div>
+
+        <div class="metrics-row">
+          <div class="card card--metric reveal-child">
+            <span class="metric-value">3</span>
+            <span class="metric-label">Models</span>
+            <span class="text-body-sm metric-detail">YOLOv4 · CLRNet · Swin Transformer</span>
+          </div>
+          <div class="card card--metric reveal-child">
+            <span class="metric-value">CCTV</span>
+            <span class="metric-label">Data Source</span>
+            <span class="text-body-sm metric-detail">국도 공공데이터 영상</span>
+          </div>
+          <div class="card card--metric reveal-child">
+            <span class="metric-value">E2E</span>
+            <span class="metric-label">Pipeline</span>
+            <span class="text-body-sm metric-detail">수집 → 라벨링 → 학습 → 탐지</span>
+          </div>
+        </div>
+
+        <div class="media-frame media-frame--hero reveal">
+          <img src="assets/images/main_open.png" alt="실시간 이상 운전 차량 탐지 모니터링 시스템" loading="lazy">
+        </div>
+
+        <div class="pipeline reveal" data-pipeline>
+          <p class="text-caption pipeline-label">Pipeline</p>
+          <div class="pipeline-track">
+            <div class="pipeline-line"><span class="pipeline-progress"></span></div>
+            <ol class="pipeline-steps">
+              <li class="pipeline-step card card--step"><span class="step-num">01</span><span>문제 정의</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">02</span><span>CCTV 수집</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">03</span><span>Bounding Box 라벨링</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">04</span><span>모델 학습</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">05</span><span>객체 탐지</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">06</span><span>성능 비교</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="impact card reveal">
+          <span class="text-caption">Impact</span>
+          <p class="text-body-sm">YOLOv4, CLRNet, Swin Transformer 3종 모델을 동일 데이터셋으로 학습·평가하여 탐지 정확도와 추론 속도를 비교. OpenCV 기반 실시간 모니터링 UI 연결.</p>
+        </div>
+      </article>
+
+      <!-- Project 02: Capstone / Robotics -->
+      <article class="project reveal" id="project-robot">
+        <div class="project-top">
+          <div class="project-meta">
+            <span class="text-caption project-index">02 · Mar–Nov 2024</span>
+            <span class="pill">Robotics</span>
+            <span class="pill pill--muted">Capstone</span>
+          </div>
+          <h3 class="text-h3 project-title">스마트팜 모니터링 · 자율주행 로봇</h3>
+          <p class="text-body project-desc">농업 환경 모니터링 자율주행 로봇 프로젝트<br>Gazebo 시뮬레이션에서 SLAM·Navigation·장애물 회피까지 ROS 기반 자율주행 스택 구현</p>
+        </div>
+
+        <div class="metrics-row">
+          <div class="card card--metric reveal-child">
+            <span class="metric-value">8</span>
+            <span class="metric-label">Stages</span>
+            <span class="text-body-sm metric-detail">ROS 환경 → Robot Navigation</span>
+          </div>
+          <div class="card card--metric reveal-child">
+            <span class="metric-value">3+</span>
+            <span class="metric-label">Sensors</span>
+            <span class="text-body-sm metric-detail">LiDAR · RealSense · RGB Camera</span>
+          </div>
+          <div class="card card--metric reveal-child">
+            <span class="metric-value">SLAM</span>
+            <span class="metric-label">Autonomy</span>
+            <span class="text-body-sm metric-detail">Mapping · Nav · Obstacle Avoidance</span>
+          </div>
+        </div>
+
+        <div class="media-frame media-frame--hero reveal">
+          <img src="assets/images/main_robot.png" alt="스마트팜 자율주행 로봇" loading="lazy">
+        </div>
+
+        <div class="pipeline reveal" data-pipeline>
+          <p class="text-caption pipeline-label">Pipeline</p>
+          <div class="pipeline-track">
+            <div class="pipeline-line"><span class="pipeline-progress"></span></div>
+            <ol class="pipeline-steps pipeline-steps--many">
+              <li class="pipeline-step card card--step"><span class="step-num">01</span><span>ROS Setup</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">02</span><span>Gazebo Sim</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">03</span><span>LiDAR Map</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">04</span><span>SLAM</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">05</span><span>Navigation</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">06</span><span>Marker Det.</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">07</span><span>Obstacle</span></li>
+              <li class="pipeline-step card card--step"><span class="step-num">08</span><span>Robot Nav</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="gallery reveal">
+          <header class="gallery-header">
+            <p class="text-caption">Visual Documentation</p>
+            <h4 class="text-h4">Simulation → Hardware → Perception → Navigation</h4>
+          </header>
+          <div class="bento-grid">
+            <figure class="bento-item bento-span-8 card">
+              <div class="media-frame"><img src="assets/images/01_gazebo_env.png" alt="Gazebo 시뮬레이션 환경" loading="lazy"></div>
+              <figcaption class="text-body-sm">Gazebo Simulation</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-4 card">
+              <div class="media-frame"><img src="assets/images/02_ros_cmd.png" alt="ROS 토픽 및 노드" loading="lazy"></div>
+              <figcaption class="text-body-sm">ROS Stack</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-4 card">
+              <div class="media-frame"><img src="assets/images/03_robot_4wheel.png" alt="4륜 자율주행 로봇" loading="lazy"></div>
+              <figcaption class="text-body-sm">Physical Robot</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-8 card">
+              <div class="media-frame media-frame--placeholder"><span>SLAM Mapping</span></div>
+              <figcaption class="text-body-sm">SLAM · LiDAR Mapping</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-4 card">
+              <div class="media-frame media-frame--placeholder"><span>RealSense</span></div>
+              <figcaption class="text-body-sm">Depth Camera</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-4 card">
+              <div class="media-frame media-frame--placeholder"><span>Marker</span></div>
+              <figcaption class="text-body-sm">Marker Detection</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-6 card">
+              <div class="media-frame media-frame--placeholder"><span>Depth 2D</span></div>
+              <figcaption class="text-body-sm">Depth 2D</figcaption>
+            </figure>
+            <figure class="bento-item bento-span-6 card">
+              <div class="media-frame media-frame--placeholder"><span>LiDAR</span></div>
+              <figcaption class="text-body-sm">LiDAR Sensing</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="impact card reveal">
+          <span class="text-caption">Impact</span>
+          <p class="text-body-sm">TF 트리 기반 좌표 변환으로 LiDAR·Depth·RGB 센서를 통합하고, Gazebo에서 검증한 Navigation 스택을 실제 4륜 로봇에 배포했습니다.</p>
+        </div>
+      </article>
+
+      <!-- Research projects compact -->
+      <div class="research-projects reveal">
+        <p class="text-caption">EcoAI Lab Research</p>
+        <div class="mini-project-grid">
+          <article class="card mini-project">
+            <div class="mini-project-head">
+              <span class="pill pill--sm">ML · Time Series</span>
+              <span class="text-body-sm mini-date">Jul–Aug 2024 · Leader</span>
+            </div>
+            <h4 class="text-h4">CNN-LSTM 기반 에너지 소비 예측</h4>
+            <p class="text-body-sm">전기·난방·온수·수도 시계열 Big Data 분석. IEEE/IEIE ICCE-Asia 2024 <strong>1저자</strong> Poster.</p>
+          </article>
+          <article class="card mini-project">
+            <div class="mini-project-head">
+              <span class="pill pill--sm">Multi-Sensor</span>
+              <span class="text-body-sm mini-date">Dec 2023–Oct 2024 · Leader</span>
+            </div>
+            <h4 class="text-h4">스마트홈 공기질 모니터링 시스템</h4>
+            <p class="text-body-sm">멀티센서 기반 실시간 공기질 모니터링. 한국통신학회 종합학술대회 2024 <strong>Talk</strong> 발표.</p>
+          </article>
+          <article class="card mini-project">
+            <div class="mini-project-head">
+              <span class="pill pill--sm">ML · Optimization</span>
+              <span class="text-body-sm mini-date">Mar–Oct 2024 · Leader</span>
+            </div>
+            <h4 class="text-h4">제지공정 최적화 · 에너지 효율 모델</h4>
+            <p class="text-body-sm">특성 상관관계 기반 ML로 초지 공정 에너지 효율 예측. 전자공학회 2024 <strong>1저자</strong> Poster.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section publications" id="publications">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="text-caption section-label">Publications</span>
+        <h2 class="text-h2 section-title">Selected Conference Papers</h2>
+        <p class="text-body section-desc">2024년 학술대회 5편 발표 · <strong>2편 1저자</strong></p>
+      </header>
+      <div class="pub-list">
+
+        <article class="card pub-card reveal">
+          <button class="pub-toggle" aria-expanded="false">
+            <div class="pub-header">
+              <span class="pub-badge">Poster</span>
+              <span class="text-caption pub-venue">KICS · 2024</span>
+              <h4 class="text-h4 pub-title">
+                딥러닝 전처리 모델 및 클러스터링 기반 주거용 건물 공기질 모니터링
+              </h4>
+              <p class="text-body-sm pub-authors">
+                Juryeong Kim, Daeun Ahn,
+                <strong>Naeun Yoon</strong>,
+                Sangkeum Lee
+              </p>
+            </div>
+
+            <svg class="pub-chevron" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+
+          <div class="pub-body">
+            <p class="text-body">
+              딥러닝 전처리 모델과 클러스터링 분석을 결합한 실시간 공기질 모니터링 플랫폼.
+            </p>
+
+            <a href="assets/papers/air_quality_monitoring.pdf"
+              target="_blank"
+              class="paper-link">
+              📄 View Paper
+            </a>
+
+          </div>
+        </article>
+
+        <article class="card pub-card reveal">
+          <button class="pub-toggle" aria-expanded="false">
+            <div class="pub-header">
+              <span class="pub-badge pub-badge--first">1st Author · Poster</span>
+              <span class="text-caption pub-venue">IEEE/IEIE ICCE-Asia · 2024</span>
+              <h4 class="text-h4 pub-title">Energy Consumption Prediction using CNN-LSTM Models</h4>
+              <p class="text-body-sm pub-authors"><strong>Naeun Yoon</strong>, Seungju Lee, Seul Ki Kim, Cheoneum Park, Taehoon Kim, Hojun Jin</p>
+            </div>
+            <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="pub-body">
+            <p class="text-body">전기·난방·온수·수도 멀티센서 시계열 데이터에 CNN-LSTM을 적용해 에너지 소비를 예측. EcoAI Lab 리더로 데이터 파이프라인 설계부터 모델 학습·평가까지 수행.</p>
+          </div>
+        </article>
+
+        <article class="card pub-card reveal">
+          <button class="pub-toggle" aria-expanded="false">
+            <div class="pub-header">
+              <span class="pub-badge">Poster</span>
+              <span class="text-caption pub-venue">IEEE/IEIE ICCE-Asia · 2024</span>
+              <h4 class="text-h4 pub-title">Clustered Polynomial Regression for Seawater Desalination Optimization</h4>
+              <p class="text-body-sm pub-authors">Seungju Lee, <strong>Naeun Yoon</strong>, Yena Jang, Taehoon Kim, Hojun Jin</p>
+            </div>
+            <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="pub-body">
+            <p class="text-body">ML 기반 클러스터링과 다항 회귀를 해수담수화 플랜트 최적화에 적용.</p>
+          </div>
+        </article>
+
+        <article class="card pub-card reveal">
+          <button class="pub-toggle" aria-expanded="false">
+            <div class="pub-header">
+              <span class="pub-badge pub-badge--first">1st Author · Poster</span>
+              <span class="text-caption pub-venue">IEIE · 2024</span>
+              <h4 class="text-h4 pub-title">초지 공정 최적화를 위한 특성 상관관계 기반 ML 에너지 효율 모델</h4>
+              <p class="text-body-sm pub-authors"><strong>Naeun Yoon</strong>, Beomhee Jung, Juryeong Kim, Nayoung Jin, Junyeon Kim, Yoonmee Doh, Sangkeum Lee</p>
+            </div>
+            <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="pub-body">
+            <p class="text-body">제지 공정 데이터에서 특성 간 상관관계를 분석하고 ML 기반 에너지 효율 향상 모델을 설계. 프로젝트 리더.</p>
+          </div>
+        </article>
+
+        <article class="card pub-card reveal">
+          <button class="pub-toggle" aria-expanded="false">
+            <div class="pub-header">
+              <span class="pub-badge">Talk</span>
+              <span class="text-caption pub-venue">KICS · 2024</span>
+              <h4 class="text-h4 pub-title">멀티 센서 기반 스마트홈 공기질 향상 모니터링 시스템</h4>
+              <p class="text-body-sm pub-authors">Daeun Ahn, <strong>Naeun Yoon</strong>, Nayoung Jin, Sangkeum Lee</p>
+            </div>
+            <svg class="pub-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="pub-body">
+            <p class="text-body">멀티센서 데이터를 실시간으로 수집·분석하는 스마트홈 공기질 모니터링 시스템. 프로젝트 리더로 시스템 설계 및 발표.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills" id="skills">
+    <div class="container">
+      <header class="section-header reveal">
+        <span class="text-caption section-label">Skills</span>
+        <h2 class="text-h2 section-title">Technical Stack</h2>
+      </header>
+      <div class="skills-layout reveal">
+        <div class="skills-group">
+          <p class="text-caption skills-group-label">Core Languages</p>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-head"><span>Python</span><span class="skill-level">8/10</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-head"><span>C</span><span class="skill-level">7/10</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-head"><span>Java</span><span class="skill-level">5/10</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="50"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-head"><span>SQL</span><span class="skill-level">5/10</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-level="50"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <p class="text-caption skills-group-label">Applied in Projects</p>
+          <div class="skill-pills">
+            <span class="pill pill--outline">Deep Learning</span>
+            <span class="pill pill--outline">Computer Vision</span>
+            <span class="pill pill--outline">YOLOv4</span>
+            <span class="pill pill--outline">Swin Transformer</span>
+            <span class="pill pill--outline">CNN-LSTM</span>
+            <span class="pill pill--outline">OpenCV</span>
+            <span class="pill pill--outline">ROS</span>
+            <span class="pill pill--outline">Gazebo</span>
+            <span class="pill pill--outline">SLAM</span>
+            <span class="pill pill--outline">LiDAR</span>
+            <span class="pill pill--outline">RealSense</span>
+            <span class="pill pill--outline">Sensor Fusion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content reveal">
+        <h2 class="text-h2 footer-title">Let's Build Together</h2>
+        <p class="text-headline footer-name">윤나은 · Naeun Yoon</p>
+        <p class="text-body footer-role">AI · Computer Vision · Machine Learning</p>
+        <a href="mailto:better5026@gmail.com" class="footer-email">better5026@gmail.com</a>
+        <a href="https://drive.google.com/drive/folders/1IvQ7Qn-CfajQHYLDxBXBbW_dAiNe4lIX?usp=drive_link" class="footer-link" target="_blank" rel="noopener">Project Files →</a>
+      </div>
+      <p class="text-caption footer-copy">&copy; 2026 Naeun Yoon</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
